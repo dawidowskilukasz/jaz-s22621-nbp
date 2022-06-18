@@ -27,7 +27,7 @@ public class NbpService {
 
     public static final String goldpriceUrl = "http://api.nbp.pl/api/cenyzlota/";
 
-    public Nbp getAvargeValue(String datestart, String dateend) {
+    public Nbp getAverageValue(String datestart, String dateend) {
         ResponseEntity<List<Price>> response =
                 restTemplate.exchange(goldpriceUrl + datestart + "/" + dateend + "/", HttpMethod.GET, null,
                         new ParameterizedTypeReference<List<Price>>() {

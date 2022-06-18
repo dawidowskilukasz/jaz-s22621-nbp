@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.pjatk.jazs22621npb.model.Nbp;
+import pl.pjatk.jazs22621npb.services.NbpService;
 
 @RestController
 @RequestMapping("/nbp")
@@ -16,13 +17,12 @@ public class NbpController {
     public NbpController(NbpController nbpController) {
         this.nbpController = nbpController;
     }
+
+
+  //  @GetMapping("/average/{datestart}/{dateend}/")
+//        //return ResponseEntity.ok(NbpService.(datestart, dateend));
+ //   }
 }
-
-    @GetMapping("/srednia/{datestart}/{dateend}/")
-
-    public ResponseEntity<Nbp> getAverageValue(@PathVariable String datestart, @PathVariable String dateend) {
-        return ResponseEntity.ok(nbp)
-    }
 
 
 
